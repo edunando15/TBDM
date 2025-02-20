@@ -1,12 +1,12 @@
 services:
-  mosquito:
+  mosquitto:
     image: eclipse-mosquitto
-    container_name: mosquito
+    container_name: mosquitto
     ports:
       - "1883:1883"
       - "9001:9001"
     volumes:
-      - "/c/Program Files/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
     restart: always
 
   connect:
@@ -34,6 +34,7 @@ services:
       CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8081
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components,/usr/share/connect-plugin-jars"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
+      CONNECT_LICENSE_TOPIC_REPLICATION_FACTOR: "1"
     volumes:
       - "./connectors:/usr/share/connect-plugin-jars"
       - "./connect-kafka-temp:/tmp/temp"
@@ -97,6 +98,7 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_JMX_PORT: 9101
       KAFKA_JMX_HOSTNAME: localhost
+      CONNECT_LICENSE_TOPIC_REPLICATION_FACTOR: "1"
     volumes:
       - "broker-kafka-data:/var/lib/kafka"
 
