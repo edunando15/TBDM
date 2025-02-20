@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "3413af31-3351-4b5f-b128-3615ead7df0a",
+		"name": "TBDM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31463923",
+		"_collection_link": "https://dark-robot-609143.postman.co/workspace/Personal-Workspace~48ee0d30-8c42-4036-bb27-2f00ee8cce6a/collection/31463923-3413af31-3351-4b5f-b128-3615ead7df0a?action=share&source=collection_link&creator=31463923"
+	},
+	"item": [
+		{
+			"name": "Connector plugins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/connector-plugins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connector-plugins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Connectors configuration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"mqtt-source-connector\",\r\n  \"config\": {\r\n    \"connector.class\": \"io.confluent.connect.mqtt.MqttSourceConnector\",\r\n    \"tasks.max\": \"1\",\r\n    \"mqtt.server.uri\": \"tcp://mqtt-broker:1883\",\r\n    \"mqtt.topics\": \"test-topic\",\r\n    \"kafka.topic\": \"test-topic\",\r\n    \"mqtt.qos\": \"1\",\r\n    \"mqtt.clean.session\": \"true\",\r\n    \"key.converter\": \"org.apache.kafka.connect.storage.StringConverter\",\r\n    \"value.converter\": \"org.apache.kafka.connect.storage.StringConverter\",\r\n    \"confluent.topic.bootstrap.servers\": \"broker:29092\",\r\n    \"license.topic.replication.factor\": \"1\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/connectors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connectors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
