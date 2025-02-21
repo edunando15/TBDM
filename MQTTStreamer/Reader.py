@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 from time import sleep
 
 # Read CSV file:
-csv_file = 'Resources\\dati_macchina.csv'
+csv_file = 'MQTTStreamer\\Resources\\dati_macchina.csv'
 data_frame = pd.read_csv(csv_file)
 
 # Connect to MQTT broker.
@@ -17,4 +17,5 @@ client.connect(broker, port)
 for row in data_frame.iterrows():
     payload = str(row)
     client.publish(topic, payload)
+    print(f"Published: {payload}")
     sleep(1)
