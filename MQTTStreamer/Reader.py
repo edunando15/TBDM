@@ -1,6 +1,7 @@
 import pandas as pd
 import paho.mqtt.client as mqtt
 from time import sleep
+import json
 
 # Read CSV file:
 csv_file = 'MQTTStreamer\\Resources\\dati_macchina.csv'
@@ -14,8 +15,10 @@ topic = 'test-topic'
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(broker, port)
 
-for row in data_frame.iterrows():
-    payload = str(row)
+for index, row in data_frame.iterrows():
+    # Convert row Series to dictionary.
+    row_dict = row.to_dict()
+    # Serialize dictionary to JSON.
+    payload = json.dumps(row_dict)
     client.publish(topic, payload)
-    print(f"Published: {payload}")
     sleep(1)
