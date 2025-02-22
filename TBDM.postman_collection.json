@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"mqtt-source-connector\",\r\n  \"config\": {\r\n    \"connector.class\": \"io.confluent.connect.mqtt.MqttSourceConnector\",\r\n    \"mqtt.server.uri\": \"tcp://mosquitto:1883\",\r\n    \"mqtt.topics\": \"test-topic\",\r\n    \"kafka.topic\": \"test-topic\",\r\n    \"mqtt.qos\": 1,\r\n    \"key.converter.schemas.enable\" : \"false\",\r\n    \"value.converter.schemas.enable\" : \"false\",\r\n    \"confluent.topic.bootstrap.servers\": \"broker:29092\",\r\n    \"license.topic.replication.factor\": 3\r\n  }\r\n}\r\n",
+					"raw": "{\r\n  \"name\": \"mqtt-source-connector\",\r\n  \"config\": {\r\n    \"connector.class\": \"io.confluent.connect.mqtt.MqttSourceConnector\",\r\n    \"mqtt.server.uri\": \"tcp://mosquitto:1883\",\r\n    \"mqtt.topics\": \"test-topic\",\r\n    \"kafka.topic\": \"test-topic\",\r\n    \"mqtt.qos\": 1,\r\n    \"key.converter\": \"org.apache.kafka.connect.storage.StringConverter\",\r\n    \"value.converter\": \"org.apache.kafka.connect.converters.ByteArrayConverter\",\r\n    \"converter.encoding\": \"UTF-8\",\r\n    \"key.converter.schemas.enable\" : \"false\",\r\n    \"value.converter.schemas.enable\" : \"false\",\r\n    \"confluent.topic.bootstrap.servers\": \"broker:29092\",\r\n    \"license.topic.replication.factor\": 3\r\n  }\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,10 +94,28 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Health",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/_cat/health?v",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"health"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": null
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -108,7 +126,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"elasticsearch-connector\",\r\n  \"config\": {\r\n    \"connector.class\": \"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector\",\r\n    \"type.name\": \"_doc\",\r\n    \"topics\": \"test-topic\",\r\n    \"name\":\"elasticsearch-connector\",\r\n    \"key.ignore\": \"false\",\r\n    \"schema.ignore\": \"false\",\r\n    \"connection.url\": \"http://elasticsearch:9200\",\r\n    \"value.converter\": \"org.apache.kafka.connect.json.JsonConverter\",\r\n    \"value.converter.schemas.enable\": \"false\",\r\n    \"key.converter\":\"org.apache.kafka.connect.storage.StringConverter\"\r\n  }\r\n}\r\n",
+					"raw": "{\r\n  \"name\": \"elasticsearch-connector\",\r\n  \"config\": {\r\n    \"connector.class\": \"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector\",\r\n    \"tasks.max\": \"1\",\r\n    \"topics\": \"test-topic\",\r\n    \"connection.url\": \"http://elasticsearch:9200\",\r\n    \"key.ignore\": \"true\",\r\n    \"schema.ignore\": \"true\",\r\n    \"value.converter\": \"org.apache.kafka.connect.json.JsonConverter\",\r\n    \"value.converter.schemas.enable\": \"false\",\r\n    \"key.converter\": \"org.apache.kafka.connect.storage.StringConverter\",\r\n    \"converter.encoding\": \"UTF-8\"\r\n  }\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -130,10 +148,75 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Check for Indeces",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/_cat/indices?v",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"indices"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test-topic search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/test-topic/_search?test-topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"test-topic",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "test-topic",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restart Connector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/connectors/mqtt-source-connector/restart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connectors",
+						"mqtt-source-connector",
+						"restart"
+					]
+				}
 			},
 			"response": []
 		}
