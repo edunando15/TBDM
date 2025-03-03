@@ -15,12 +15,12 @@ The project involves many features. First of all, a streaming pipeline has been 
 
 # Description and prerequisites
 
-The project has been developed using Docker, a development tool that permits a fast, platform-independent deployment, running applications in containers. Each container represents and independent unit that is isolated from the others, but collaborates to realise the application's behaviour. The user needs to install Docker(https://www.docker.com/products/docker-desktop/), and have a stable Python version(https://www.python.org/downloads/) before proceeding in the guide.
-It is also necessary to execute some REST APIs. Postman tool(https://www.postman.com/downloads/) is recommended.
+The project has been developed using Docker, a development tool that permits a fast, platform-independent deployment, running applications in containers. Each container represents and independent unit that is isolated from the others, but collaborates to realise the application's behaviour. The user needs to install [Docker](https://www.docker.com/products/docker-desktop/), and have a stable [Python version](https://www.python.org/downloads/) before proceeding in the guide.
+It is also necessary to execute some REST APIs. [Postman tool](https://www.postman.com/downloads/) is recommended.
 
-Optionally, the user can install MQTT Explorer(http://mqtt-explorer.com/) to visualise MQTT messages.
+Optionally, the user can install [MQTT Explorer](http://mqtt-explorer.com/) to visualise MQTT messages.
 
-It's highly recommended to allocate at least 16 gigabytes of RAM memory for Docker, to avoid performance issues, and a reasonably high number of processors (not all the available ones on the host machine). Edits can be performed modifying the wsl.config(https://learn.microsoft.com/en-gb/windows/wsl/wsl-config) file.
+It's highly recommended to allocate at least 16 gigabytes of RAM memory for Docker, to avoid performance issues, and a reasonably high number of processors (not all the available ones on the host machine). Edits can be performed modifying the [wsl.config](https://learn.microsoft.com/en-gb/windows/wsl/wsl-config) file.
 
 # Installation
 
