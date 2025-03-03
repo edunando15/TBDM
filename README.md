@@ -44,10 +44,66 @@ Users reaching this point are able to stream any data in JSON format to an MQTT 
 
 To inject the machine data into Elasticsearch, the user can either open the Elasticsearch UI, clicking on the port section of the container named "kibana" in Docker, and then, in the discover section, upload the CSV file manually (the file is located in MQTTStreamer/Resources/dati_macchina_copy.csv); or execute the FullUploader.py file in the MQTTStreamer directory. To execute the script, it can either be opened in and IDE and executed, or the user can:
 - open the terminal;
-- type ```cd path/to/MQTTStreamer```;
+- type ```cd path/to/MQTTStreamer```
 - type ```python FullUploader.py```
 
-At this point, data should be visible both in Kibana and Kafka, and MQTT Explorer as well.
+At this point, data should be visible both in Kibana (Discover section) and Kafka, and MQTT Explorer as well. 
 
+# Map visualisation
 
-# Dashboards, map, alert
+To visualise data in a map, the user first needs to create a data view. To do that, the user can go to Stack Management -> Data view and create a new Data view, based on a certain index. Then, the user needs to copy data from the index to another one, in which coordinates are in a proper format (Geospatial field). It is assumed that, in the first index, there are two fields called "latitude" and "longitude", at least like it's shown in the "dati_macchina_copy.csv" file in the MQTTStreamer directory. To do this, the user can go to Dev Tools, and execute the following request:
+
+```PUT /your-new-index-name
+{
+  "mappings": {
+    "properties": {
+      "location": {
+        "type": "geo_point"
+      },
+      "latitude": {
+        "type": "float"
+      },
+      "longitude": {
+        "type": "float"
+      }
+    }
+  }
+}
+```
+
+In this way, a new index where documents contain a Geospatial field is created. Then, in the same page, the user needs to execute the following request:
+
+```POST _reindex
+{
+  "source": {
+    "index": "your-source-index"
+  },
+  "dest": {
+    "index": "your-new-index-name"
+  },
+  "script": {
+    "source": "ctx._source.location = ['lat': ctx._source.latitude, 'lon': ctx._source.longitude]"
+  }
+}
+```
+
+In this manner, data will be copied in a new index containing a Geospatial field.
+
+To visualise the data, the user has to open the "Map" page (under the Analytics section), select the "Add Layer" option, select the previously created data view and the newly created Geospatial field. Don't forget to select the correct time range!
+
+# Alerts enablement
+
+To generate alerts it's necessary to generate encryption keys in Kibana. To do that, the user shall:
+
+- open the terminal in the directory in which Docker is running;
+- type ```docker exec -it kibana /bin/bash``` to open the Kibana CLI;
+- type ```kibana-encryption-keys generate``` to generate the encryption keys.
+
+Once they've been generated, the user shall copy each key and paste it in the corresponding field in the file named kibana.yml, save the file and restart Docker by tipying
+```docker restart```
+
+# ML model
+
+Elasticsearch offers a Machine Learning model that can be used to analyze data. The user can access it in the Machine Learning page under the Analytics section. To start a new analysis, the user must select "Create Job" -> choose the index -> configure the options according to the needs.
+
+At this point, the user shall be able to create dashboards, alerts, watchers, and visualise by choice.
