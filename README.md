@@ -107,3 +107,6 @@ Once they've been generated, the user shall copy each key and paste it in the co
 Elasticsearch offers a Machine Learning model that can be used to analyze data. The user can access it in the Machine Learning page under the Analytics section. To start a new analysis, the user must select "Create Job" -> choose the index -> configure the options according to the needs.
 
 At this point, the user shall be able to create dashboards, alerts, watchers, and visualise by choice.
+
+#C# connector
+The project integrates a C# connector to interact with Elasticsearch, enabling efficient data retrieval for analysis and visualization. The connector is implemented using the NEST client, a high-level .NET library for Elasticsearch. This allows users to perform queries, retrieve sensor data, and process results within a C# environment. To use the connector, the user must ensure the .NET SDK is installed and configure the connection settings to match the running Elasticsearch instance. The provided C# client simplifies data retrieval, making it easy to integrate Elasticsearch data into .NET applications.
