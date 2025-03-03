@@ -3,9 +3,9 @@ Repository for the "Technologies for Big Data Management" course, held by profes
 
 # Participants
 
-Damiano Buzzo - damiano.buzzo@studenti.unicam.it
-Francesco Pizzuto - francesco.pizzuto@studenti.unicam.it
-Eduardo Tiano - eduardovincenz.tiano@studenti.unicam.it
+- Damiano Buzzo - damiano.buzzo@studenti.unicam.it
+- Francesco Pizzuto - francesco.pizzuto@studenti.unicam.it
+- Eduardo Tiano - eduardovincenz.tiano@studenti.unicam.it
 
 # Scope of the project
 
