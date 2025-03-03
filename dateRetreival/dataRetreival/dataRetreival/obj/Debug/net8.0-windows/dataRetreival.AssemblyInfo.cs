@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dataRetreival")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bb8bc10f3f9c32e11534a4c7efa9975d130bd73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36aa83ac5d73207480335041168f1b2deed02731")]
 [assembly: System.Reflection.AssemblyProductAttribute("dataRetreival")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dataRetreival")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

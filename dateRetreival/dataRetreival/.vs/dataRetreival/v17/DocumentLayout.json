@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|c:\\users\\buzzo\\onedrive\\desktop\\universitamagistrale\\bigdata\\tbdmproject\\tbdm\\dateretreival\\dataretreival\\dataretreival\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|solutionrelative:dataretreival\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|c:\\users\\buzzo\\onedrive\\desktop\\universitamagistrale\\bigdata\\tbdmproject\\tbdm\\dateretreival\\dataretreival\\dataretreival\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|solutionrelative:dataretreival\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|c:\\users\\buzzo\\onedrive\\desktop\\universitamagistrale\\bigdata\\tbdmproject\\tbdm\\dateretreival\\dataretreival\\dataretreival\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|solutionrelative:dataretreival\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|c:\\users\\buzzo\\onedrive\\desktop\\universitamagistrale\\bigdata\\tbdmproject\\tbdm\\dateretreival\\dataretreival\\dataretreival\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A2927A3-B834-4C07-8D99-5F681A16868E}|dataRetreival\\dataRetreival.csproj|solutionrelative:dataretreival\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,37 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\dataRetreival\\Data.cs",
               "RelativeDocumentMoniker": "dataRetreival\\Data.cs",
               "ToolTip": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\dataRetreival\\Data.cs",
               "RelativeToolTip": "dataRetreival\\Data.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-01T16:28:37.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\dataRetreival\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "dataRetreival\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\dataRetreival\\MainWindow.xaml.cs",
               "RelativeToolTip": "dataRetreival\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwB0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAB0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T11:33:50.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\buzzo\\OneDrive\\Desktop\\universitaMagistrale\\BigData\\TBDMProject\\TBDM\\dateRetreival\\dataRetreival\\dataRetreival\\MainWindow.xaml",
               "RelativeDocumentMoniker": "dataRetreival\\MainWindow.xaml",
