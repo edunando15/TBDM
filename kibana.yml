@@ -1,6 +1,18 @@
 server.host: "0.0.0.0"
 elasticsearch.hosts: ["http://elasticsearch:9200"]
-# command to generate encryption keys: docker exec kibana /bin/bash, and then kibana-encryption-keys generate
+# command to generate encryption keys: docker exec -it kibana /bin/bash, and then kibana-encryption-keys generate
 xpack.encryptedSavedObjects.encryptionKey: "af052d2e0c1b0737b872d2712e689c17"
 xpack.reporting.encryptionKey: "6c8ef49a578372b2a217331a9d54ad80"
 xpack.security.encryptionKey: "ccec100a1bbe1a21f404cc3e8722953d"
+xpack.reporting.kibanaServer.hostname: localhost
+
+#xpack.actions.enabled: true
+#xpack.actions.allowedHosts: ["smtp.gmail.com"]
+#xpack.actions.email.smtp.host: "smtp.gmail.com"
+#xpack.actions.email.domain_allowlist: ["*"]  # Allow all domains, or specify ["gmail.com"]
+#xpack.actions.email.smtp.port: 587
+#xpack.actions.email.smtp.secure: false  # Use 'true' if using port 465
+#xpack.actions.email.smtp.auth: true
+#xpack.actions.email.smtp.user: "buzzodamiano02@gmail.com"
+#xpack.actions.email.smtp.password: "hvgb milf giaf arfm"  # Use the 16-character App Password
+#xpack.actions.email.smtp.from: "buzzodamiano02@gmail.com"

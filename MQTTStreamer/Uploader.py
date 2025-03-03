@@ -10,7 +10,7 @@ data_frame = pd.read_csv(csv_file)
 # Define parameters to connect to MQTT broker.
 broker = 'localhost'
 port = 1883
-topic = 'test-topic'
+topic = 'new-test-topic'
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(broker, port)

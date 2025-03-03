@@ -51,6 +51,7 @@ services:
       - "9200:9200"
     volumes:
       - elasticsearch-data:/usr/share/elasticsearch/data
+      #- ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ulimits:
       memlock:
         soft: -1
