@@ -23,7 +23,7 @@ Optionally, the user can install [MQTT Explorer](http://mqtt-explorer.com/) to v
 It's highly recommended to allocate at least 16 gigabytes of RAM memory for Docker, to avoid performance issues, and a reasonably high number of processors (not all the available ones on the host machine). Edits can be performed modifying the [wsl.config](https://learn.microsoft.com/en-gb/windows/wsl/wsl-config) file.
 
 # Structure of the project
-![image of the structure](images/structure.png)
+![image of the structure](structure.png)
 
 # Installation
 
@@ -105,6 +105,13 @@ To generate alerts it's necessary to generate encryption keys in Kibana. To do t
 Once they've been generated, the user shall copy each key and paste it in the corresponding field in the file named kibana.yml, save the file and restart Docker by tipying
 ```docker restart```
 
+# Export/import of dashboard and indexes(saved objects)
+
+In Kibana it is possible to export/import dashboards and indeces (saved objects) to share configurations between different istances of the software. To do that the user can go to Stack Management -> Saved Objects.
+
+In this section it's possible to export saved objects in ndjson format. In this repository in [exports](/exports) you can find some example configurations that represent the dashboard we have done exploring the dewatering machine data.
+
+To import the saved objects the user can import the ndjson files in the same section previously mentioned.
 # ML model
 
 Elasticsearch offers a Machine Learning model that can be used to analyze data. The user can access it in the Machine Learning page under the Analytics section. To start a new analysis, the user must select "Create Job" -> choose the index -> configure the options according to the needs.
@@ -113,3 +120,5 @@ At this point, the user shall be able to create dashboards, alerts, watchers, an
 
 # C# connector
 The project integrates a C# connector to interact with Elasticsearch, enabling efficient data retrieval for analysis and visualization. The connector is implemented using the NEST client, a high-level [.NET library](https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/getting-started-net.html) for Elasticsearch. This allows users to perform queries, retrieve sensor data, and process results within a C# environment. To use the connector, the user must ensure the .NET SDK is installed and configure the connection settings to match the running Elasticsearch instance. The provided C# client simplifies data retrieval, making it easy to integrate Elasticsearch data into .NET applications.
+
+
