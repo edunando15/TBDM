@@ -105,7 +105,7 @@ To generate alerts it's necessary to generate encryption keys in Kibana. To do t
 Once they've been generated, the user shall copy each key and paste it in the corresponding field in the file named kibana.yml, save the file and restart Docker by tipying
 ```docker restart```
 
-# Export/import of dashboard and indexes(saved objects)
+# Export/import of dashboards and indexes(saved objects)
 
 In Kibana it is possible to export/import dashboards and indeces (saved objects) to share configurations between different istances of the software. To do that the user can go to Stack Management -> Saved Objects.
 
