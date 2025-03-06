@@ -22,6 +22,9 @@ Optionally, the user can install [MQTT Explorer](http://mqtt-explorer.com/) to v
 
 It's highly recommended to allocate at least 16 gigabytes of RAM memory for Docker, to avoid performance issues, and a reasonably high number of processors (not all the available ones on the host machine). Edits can be performed modifying the [wsl.config](https://learn.microsoft.com/en-gb/windows/wsl/wsl-config) file.
 
+# STRUCTURE OF THE PROJECT
+![image of the structure](structure.png)
+
 # Installation
 
 To run the project, the user must clone this repository in a directory using the Git command:
