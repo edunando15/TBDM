@@ -55,7 +55,8 @@ At this point, data should be visible both in Kibana (Discover section) and Kafk
 
 To visualise data in a map, the user first needs to create a data view. To do that, the user can go to Stack Management -> Data view and create a new Data view, based on a certain index. Then, the user needs to copy data from the index to another one, in which coordinates are in a proper format (Geospatial field). It is assumed that, in the first index, there are two fields called "latitude" and "longitude", at least like it's shown in the "dati_macchina_copy.csv" file in the MQTTStreamer directory. To do this, the user can go to Dev Tools, and execute the following request:
 
-```PUT /your-new-index-name
+```
+PUT /your-new-index-name
 {
   "mappings": {
     "properties": {
