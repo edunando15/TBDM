@@ -204,6 +204,5 @@ It provides Classification models, used to predict which class a certain documen
 ![Another Machine Learning example showing anomalies.](images/ml2_anomalies.png)
 
 # C# connector
+
 The project integrates a C# connector to interact with Elasticsearch, enabling efficient data retrieval for analysis and visualization. The connector is implemented using the NEST client, a high-level [.NET library](https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/getting-started-net.html) for Elasticsearch. This allows users to perform queries, retrieve sensor data, and process results within a C# environment. To use the connector, the user must ensure the .NET SDK is installed and configure the connection settings to match the running Elasticsearch instance. The provided C# client simplifies data retrieval, making it easy to integrate Elasticsearch data into .NET applications.
-
-
