@@ -76,7 +76,8 @@ PUT /your-new-index-name
 
 In this way, a new index where documents contain a Geospatial field is created. Then, in the same page, the user needs to execute the following request:
 
-```POST _reindex
+```
+POST _reindex
 {
   "source": {
     "index": "your-source-index"
