@@ -1,7 +1,5 @@
 # Dewatering Machine Analysis
 
-# Participants
-
 - Damiano Buzzo - damiano.buzzo@studenti.unicam.it
 - Francesco Pizzuto - francesco.pizzuto@studenti.unicam.it
 - Eduardo Tiano - eduardovincenz.tiano@studenti.unicam.it
